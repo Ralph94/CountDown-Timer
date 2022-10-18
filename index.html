@@ -1,0 +1,54 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Macondo&display=swap" rel="stylesheet" />
+  <link href="css/main.css" rel="stylesheet" type="text/css" /> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+  <link href="/css/all.min.css " rel="stylesheet" type="text/css" />
+
+  <title>Mobile Suit Gundam</title>
+</head>
+
+<body>
+  <div>
+    <header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <div id="content">
+        <div id="wrapper">
+            <div id="countdown">00 : 00 : 00: 00</div>
+          <h1>Mobile<span>Suit</span>Gundam</h1>
+          <h2>Coming Soon<span>!</span></h2>
+        </div>
+        <div class="bgMusic">
+          <audio src="music/music.mp3" loop=""></audio>
+          <button class="btn">
+            <i class="fas fa-play-circle"></i>
+            <i class="fas fa-pause-circle"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+   <script src="js/main.js"></script>
+    <script type="text/javascript">
+         $(document).ready(function(){
+            $(".btn .fa-play-circle").on("click", function(){
+                $(this).hide();
+                $(".btn .fa-pause-circle").fadeIn();
+                $(".bgMusic audio")[0].play();
+            });
+            $(".btn .fa-pause-circle").on("click", function(){
+                $(this).hide();
+                $(".btn .fa-play-circle").fadeIn();
+                $(".bgMusic audio")[0].pause();
+            });
+        });
+        </script>
+    </script>
+    </body>
+</html>
+</body>
